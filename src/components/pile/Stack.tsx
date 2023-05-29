@@ -1,10 +1,10 @@
-import Empty from "../components/empty/Empty"
-import { usePile } from "../hooks/pile/usePile"
+import Empty from "../empty/Empty"
+import { usePile } from "../../hooks/stack/useStack"
 import {ArrowLeft, ArrowRight, Minus, Plus, Trash} from 'phosphor-react'
 
 
 const Pile = () => {
-    const {array, handlePile, number, setNumber, handleClear, handlePop} = usePile()
+    const {array, handlePush, number, setNumber, handleClear, handlePop} = usePile()
 
   return (
     <main className="min-h-screen w-screen flex flex-col justify-center items-center gap-4 py-24 overflow-x-hidden">
@@ -26,7 +26,7 @@ const Pile = () => {
         )}
 
         <form
-            onSubmit={handlePile}
+            onSubmit={handlePush}
             className="header w-screen h-[10%] flex gap-8 justify-center items-center fixed bottom-0 left-0 shadow-2xl"
           >
               <p className="text-white">

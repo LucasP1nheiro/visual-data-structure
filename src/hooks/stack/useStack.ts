@@ -4,7 +4,7 @@ export const usePile = () => {
     const [array, setArray] = useState<number[]>([])
     const [number, setNumber] = useState(0)
 
-    const handlePile = (e: React.FormEvent) => {
+    const handlePush = (e: React.FormEvent) => {
         e.preventDefault()
 
          setArray((prev) => [...prev, number])
@@ -23,7 +23,7 @@ export const usePile = () => {
 
     return {
         array,
-        handlePile,
+        handlePush,
         number,
         setNumber,
         handleClear,
