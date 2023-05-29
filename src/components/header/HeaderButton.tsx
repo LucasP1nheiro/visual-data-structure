@@ -1,4 +1,4 @@
-import { useHeaderButton } from "../../hooks/useHeaderButton"
+import { useHeaderButton } from "../../hooks/header/useHeaderButton"
 
 interface HeaderButtonType {
     buttonName: string

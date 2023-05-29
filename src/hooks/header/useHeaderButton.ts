@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { DataStructureContext } from "../context/DataStructureContext"
+import { DataStructureContext } from "../../context/DataStructureContext"
 
 interface useHeaderButton {
     buttonName: string
