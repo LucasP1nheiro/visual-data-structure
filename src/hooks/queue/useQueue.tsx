@@ -30,6 +30,8 @@ export default function useQueue() {
         setNumber(number - 1)
     }
 
+    const definition = "A queue is a fundamental data structure in computer science that follows the principle of 'first-in, first-out' (FIFO). It can be visualized as a line of people waiting for a service, where the person who arrives first is the first one to be served."
+
 
     return {
         queue,
@@ -40,6 +42,7 @@ export default function useQueue() {
         handleDequeue,
         handleClear,
         incrementNumber,
-        decrementNumber
+        decrementNumber,
+        definition
     }
 }

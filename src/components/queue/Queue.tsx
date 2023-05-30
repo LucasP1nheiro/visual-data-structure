@@ -2,6 +2,7 @@ import { ArrowLeft, ArrowRight, Minus, Plus, Trash } from "phosphor-react"
 import useQueue from "../../hooks/queue/useQueue"
 import Empty from "../empty/Empty"
 import QueueNode from "./QueueNode"
+import Definition from "../definition/Definition"
 
 
 const Queue = () => {
@@ -13,17 +14,18 @@ const Queue = () => {
       handleClear,
       incrementNumber,
       decrementNumber,
+      definition
     } = useQueue()
 
   
   
 
   return (
-    <main className="min-h-screen w-screen flex flex-col justify-center items-center gap-4 py-24 overflow-x-hidden">
+    <div className="min-h-screen w-screen flex flex-col justify-center items-center gap-4 py-24 overflow-x-hidden">
           {queue.length === 0 && (<Empty />)}
           
           {queue.length > 0 && (
-            <div
+            <main
               className="flex items-start gap-4"
             >
               {queue.map((_, index) => (
@@ -33,7 +35,7 @@ const Queue = () => {
                 
                 
                 ))}
-            </div>
+            </main>
           )}
 
           <footer className="fixed bottom-0 h-[10%] left-0 w-screen flex justify-center items-center gap-8">
@@ -81,8 +83,9 @@ const Queue = () => {
                 <Trash size={18} color={'#34d399'} />
                 <p>Clear</p>
             </button>
+        <Definition title="Queue" definition={definition} />
           </footer>
-    </main>
+    </div>
   )
 }
 

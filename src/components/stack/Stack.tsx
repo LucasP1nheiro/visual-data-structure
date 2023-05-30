@@ -1,10 +1,11 @@
 import Empty from "../empty/Empty"
 import { usePile } from "../../hooks/stack/useStack"
 import {ArrowLeft, ArrowRight, Minus, Plus, Trash} from 'phosphor-react'
+import Definition from "../definition/Definition"
 
 
 const Pile = () => {
-    const {array, handlePush, number, setNumber, handleClear, handlePop} = usePile()
+    const {array, handlePush, number, setNumber, handleClear, handlePop, definition} = usePile()
 
   return (
     <main className="min-h-screen w-screen flex flex-col justify-center items-center gap-4 py-24 overflow-x-hidden">
@@ -70,6 +71,8 @@ const Pile = () => {
                 <Trash size={18} color={'#34d399'} />
                 <p>Clear</p>
             </button>
+              
+            <Definition title="Stack" definition={definition} />        
         </form>
     </main>
   )

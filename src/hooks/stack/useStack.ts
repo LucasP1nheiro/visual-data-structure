@@ -19,6 +19,8 @@ export const usePile = () => {
     const handleClear = () => {
         setArray([])
     }
+
+    const definition = "A stack is a fundamental data structure in computer science that follows the principle of 'last-in, first-out' (LIFO). It can be visualized as a vertical stack of objects, where the last object placed on top is the first one to be removed."
     
 
     return {
@@ -27,6 +29,7 @@ export const usePile = () => {
         number,
         setNumber,
         handleClear,
-        handlePop
+        handlePop,
+        definition
     }
 }
