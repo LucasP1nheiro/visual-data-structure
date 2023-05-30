@@ -15,11 +15,11 @@ const Definition = ({title, definition}: DefinitionProps) => {
         </Popover.Trigger>
     
         <Popover.Portal>
-            <Popover.Content className="w-80 h-72 backdrop-blur-sm shadow-xl p-4 rounded-xl border-[1px] border-emerald-400 bg-black/5 flex flex-col gap-4">
+            <Popover.Content className="w-80 h-72 backdrop-blur-sm shadow-2xl p-4 rounded-xl  bg-black/5 flex flex-col gap-4">
                 <div
                     className="w-full flex items-center justify-between"
                 >
-                <h1 className="text-xl text-emerald-400">{title}</h1>      
+                <h1 className="text-xl text-emerald-400 ">{title}</h1>      
 
                     <Popover.Close  aria-label="Close">
                         <X size={24} color={"#34d399"}/>
